@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Raspberry Pi MIPI CSI Camera | High Quality 4K Camera</title>
+    <meta name="ROBOTS" content="NOINDEX">
+    <meta name="description" content=" Registration to get mail">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="alternate" id="en" hreflang="x-default" href="//www.e-consystems.com/13mp-autofocus-usb-camera.asp" />
+    <link rel="alternate" id="de" hreflang="de" href="//www.e-consystems.com/13mp-autofocus-usb-kamera-de.asp" />
+    <link rel="alternate" id="ja" hreflang="ja" href="//www.e-consystems.com/jp/13mp-autofocus-usb-camera-jp.asp" />
+    <link rel="stylesheet" type="text/css" href="css/hub-styles-responsive.css" media="all" />
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700&display=swap' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="/images/econ.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&family=Lemonada:wght@300;600&display=swap" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js" type="text/javascript"></script>
+    <script src="validation.js" type="text/javascript"></script>
+    <script src="client-validation.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://webservices.data-8.co.uk/Javascript/Loader.ashx?key=Z873-8ZD5-2CDV-R49C"></script>
+    <script type="text/javascript">  
+         function loadIntegr8() {
+                // Load the EmailValidation Integr8 service
+                data8.load('EmailValidation');
+            }
+    
+            function Emailvalid(email, level) {
+                var emailvalidation = new data8.emailvalidation();
+                emailvalidation.cleanse(
+                    email,
+                    level,
+                    null,
+                    null,
+                    showCleanseResult
+                );
+            }
+    //incorporate show clean results
+    function showCleanseResult(result) {
+                // Check that the call succeeded, and show the error message if there was a problem.
+                if (!result.Status.Success) {
+                    alert('Error: ' + result.Status.ErrorMessage);
+                    return false;
+                }
+                else {
+                    
+                   alert("worng email");
+                    }
+            }
+            loadIntegr8();
+            var specialKeys = new Array();
+            specialKeys.push(8); //Backspace
+            specialKeys.push(9); //Tab
+            specialKeys.push(46); //Delete
+            specialKeys.push(32); //Space
+            specialKeys.push(36); //Home
+            specialKeys.push(35); //End
+            specialKeys.push(37); //Left
+            specialKeys.push(39); //Right
+            function IsAlphaNumeric(e) {
+                var keyCode = e.keyCode == 0 ? e.charCode : e.keyCode;
+                var ret = ((keyCode >= 48 && keyCode <= 57) || (keyCode == 32) || (keyCode >= 65 && keyCode <= 90) || (keyCode >= 97 && keyCode <= 122) || (specialKeys.indexOf(e.keyCode) != -1 && e.charCode != e.keyCode));
+                if (ret == false) {
+                    alert("Special Characters not allowed");
+                }
+                return ret;
+            }
+            function IsValid(obj, msg) {
+                //pat = /^[a-z][a-z_0-9\.]+@[a-z_0-9\.]+\.[a-z]*$/i
+                pat = /^[a-z][a-z_0-9\.\-]+@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9\.]+\.[a-z]*$/i
+                at = "@";
+                if (pat.test(obj.value)) {
+                    str = obj.value;
+                    start = str.indexOf(at) + 1;
+                    end = str.length;
+                    domain = str.substring(start, end);
+                    //ret = validatedomain(domain);
+                    dot = ".";
+                    dntspt = domain.indexOf(dot);
+                    close = domain.length;
+                    dndtspt = domain.substring(0, dntspt);
+                    final = badwords(dndtspt);
+                    ret = validatedomain(domain);
+                    return ret;
+                }
+                else {
+                    alert(msg)
+                    obj.focus()
+                    obj.select()
+                    return false
+                }
+            }
+        
+        function emptycheck() {
+    //Company name validate
+    // alert("emptycheck")
+                if (document.getElementById("cameraname").value.trim() == "") { 
+                    document.getElementById("cameraname").style.borderColor="red";
+                    // document.getElementById("alert1").style.display="block";
+                    document.getElementById("cameraname").focus();      
+                    window.setTimeout(function () {
+                    // document.getElementById('alert1').style.display = "none";
+                    document.getElementById("cameraname").style.borderColor = "#ccc";
+                }, 5000);     
+                    return true;                
+                }
+                else if (!badwords(document.getElementById("cameraname").value, "Please enter camera name")) {
+                    document.getElementById("cameraname").value=""; 
+                    document.getElementById("cameraname").focus();
+                    // document.getElementById("fcname").style.borderColor="green";
+                    // document.getElementById("alert1").style.display="block";
+                    window.setTimeout(function () {
+                    // document.getElementById('alert1').style.display = "none";
+                    document.getElementById("cameraname").style.borderColor = "#ccc";
+                }, 5000);
+                    // return false;
+                }
+                if (document.getElementById("techno").value.trim() == "") { 
+                    document.getElementById("techno").style.borderColor="red";
+                    // document.getElementById("alert1").style.display="block";
+                    document.getElementById("techno").focus();      
+                    window.setTimeout(function () {
+                    // document.getElementById('alert1').style.display = "none";
+                    document.getElementById("techno").style.borderColor = "#ccc";
+                }, 5000);     
+                    return true;                
+                }
+                else if (!badwords(document.getElementById("techno").value, "Please enter technology name")) {
+                    document.getElementById("techno").value=""; 
+                    document.getElementById("techno").focus();
+                    // document.getElementById("fcname").style.borderColor="green";
+                    // document.getElementById("alert1").style.display="block";
+                    window.setTimeout(function () {
+                    // document.getElementById('alert1').style.display = "none";
+                    document.getElementById("techno").style.borderColor = "#ccc";
+                }, 5000);
+                    // return false;
+                }
+                
+                // Email validate with data-8
+                 if (document.getElementById("femail").value.trim() == "") {
+                    // document.getElementById("alert3").style.display="block";
+                     document.getElementById("femail").focus();
+                     document.getElementById("femail").style.borderColor ="red";
+                     window.setTimeout(function () {
+                    // document.getElementById('alert3').style.display = "none";
+                    document.getElementById("femail").style.borderColor = "#ccc";
+                }, 5000);
+                }
+                   else if (!badwords(document.getElementById("femail").value, "Please enter email")) {
+                    document.getElementById("femail").focus();
+                    document.getElementById("femail").style.borderColor="red";
+                    // document.getElementById("alert3").style.display="block";
+                    window.setTimeout(function () {
+                    // document.getElementById('alert3').style.display = "none";
+                    document.getElementById("femail").style.borderColor = "#ccc";
+                }, 5000);
+                    // return false;
+                   }
+                else if(!IsValid(document.getElementById("femail"), "Please enter valid email")) {
+                                         document.getElementById("femail").focus();
+                                         window.setTimeout(function () {
+                    // document.getElementById('alert3').style.display = "none";
+                    document.getElementById("femail").style.borderColor = "#ccc";
+                }, 5000);
+                                          return false;
+                                     }
+                else {
+                        //  SubmitPage();
+                        // return true;
+                        alert("all are ok");
+                      }   
+                
+              }
+                function SubmitPage() {
+                var Companyctrl, namectrl, emailctrl, detailctrl, servicectrl, phonectrl, nemailctrl, docctrl;
+                Companyctrl = document.getElementById("fcname").value;
+                namectrl = document.getElementById("fname").value;
+                emailctrl = document.getElementById("femail").value;
+                detailctrl=document.getElementById("desc").value;
+                phonectrl=document.getElementById("fpno").value;
+                // nemailctrl = document.getElementById("incorpid");
+                servicectrl = "Customer contact us";
+                docctrl = "/mailform.asp";
+                document.getElementById("form1").submit.disabled = true;
+                var url = "registerform.asp?download=MAIL&CM=" + Companyctrl + "&NM=" + namectrl + "&EM=" + emailctrl +  "&PH=" + phonectrl + "&DT=" + detailctrl +  "&DP=" + encodeURIComponent(docctrl);
+                var xmlHttp = new XMLHttpRequest();
+                xmlHttp.open("GET", url, true);
+                xmlHttp.send(null);
+                xmlHttp.onreadystatechange = function () {
+                    if (xmlHttp.readyState == 4) {
+                        //document.frmreg.action = "https://crm.zoho.com/crm/WebToLeadForm";
+                        document.getElementById("form1").action = document.getElementById("returnURL").value;
+                        document.getElementById("form1").submit();
+    
+                    }
+                }
+                
+             }   
+    </script>
+     <style type="text/css">
+        .customize-tab-4 #horizontalTab-module li a {
+            width: 174.5px !important;
+        }
+
+        #myBtn {
+			text-decoration:underline;
+            font-size: 12px;
+            box-shadow: none;
+        }
+
+            #myBtn:hover {
+                background: #fff;
+                color: #3f4d85;
+            }
+            #dots{
+                margin: 2em auto; width: 99%; float: none; font-size: 12px;
+            }
+        #dots {
+            display: none;
+        }
+        #formdiv{
+            width: 100%;
+            box-sizing:border-box;
+            border:none;
+            outline: none;
+            border-radius: 5px;
+            box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+        }
+        #form{
+            padding: 5px 5px 5px 5px;
+        }
+        #label{
+            display: inline;
+            color: black;
+            font-weight: 500;
+            font-size: 10px;
+            font-family: 'Roboto Slab', serif;
+        }
+        #label1{
+            display: inline;
+            color:black;
+            font-weight: 500;
+            font-size: 10px;
+            font-family: 'Roboto Slab', serif;
+        }
+        .tfield{
+            width: 30%;
+            border: none;
+            border-bottom:1px solid rgb(2, 139, 25);
+            outline: none;
+        }
+        .btn{
+            width: 80%;
+            border-radius: 20px;
+            justify-content:center;
+            font-weight: 600;
+            padding: 5px 5px 5px 5px;
+            /* margin-bottom: 10px; */
+            background: transparent;
+            color: #3f4d85;
+            border: 1px solid #3f4d85;
+            outline: none;
+        }
+        .btn:hover{
+            background: #3f4d85;
+            color: #fdfdff;
+        }
+        .linediv{
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px 0px 10px 0px;
+            /* margin-top:100px; */
+
+        }
+    </style>
+</head>
+<body>
+    <div id="formdiv">
+        <form id="form" method="POST" action="">
+            <h2 style="color: #3f4d85;justify-content: center; display: flex; padding: 20px 5px -8px 5px;">e-con Pvt Ltd.. </h2>
+            <h6 style="color: #5a5f5d;justify-content: center; display: flex;" > Tell us your intrest we  save your time</h6>
+             <div class="linediv"><label id="label"> Your intrested in</label> <input type="text" class="tfield" id="cameraname" required autocomplete="off" ><label id="label1">camera,</label> </div>
+                <div class="linediv"> <label id="label">Your contact mail id</label><input type="email" class="tfield" id="femail" autocomplete="off" required><label id="label1">email,</label></div>
+                    <div class="linediv"> <label id="label">Looking for</label><input type="text" class="tfield"  id="techno" autocomplete="off"><label id="label1">technology,</label></div>
+            <button class="btn" value="Find solution" onclick="emptycheck()">Find solution</button>
+
+        </form>
+    </div>
+    <script src="/js/main-scripts.js" type="text/javascript"></script>
+    <script src="/js/common-scripts.js" type="text/javascript"></script>
+
+</body>
+</html>
